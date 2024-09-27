@@ -1,0 +1,6 @@
+groq
+httpx
+fastapi
+pydantic
+uvicorn
+pytest
