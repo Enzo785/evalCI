@@ -5,7 +5,7 @@ from groq import Groq
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-# Charger les variables d'environnement à partir du fichier .env
+#dd Charger les variables d'environnement à partir du fichier .env
 load_dotenv()
 
 app = FastAPI()
