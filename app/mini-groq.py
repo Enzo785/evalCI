@@ -1,14 +1,19 @@
+import os
 import groq
+from dotenv import load_dotenv
 from groq import Groq
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+load_dotenv()
+
+api_key = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=api_key)
+
 app = FastAPI()
 
-# Configure the default for all requests:
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
-    # 20 seconds (default is 1 minute)
     timeout=20.0,
     max_retries=1,
 )
